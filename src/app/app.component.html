@@ -1,0 +1,79 @@
+<div style="text-align: center;">
+<h3>Simple Calculator</h3>
+<br />
+<style>
+  #calc {
+    width: 300px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  #display {
+    height: 40px;
+    font-size: 20px;
+    width: 300px;
+    text-align: right;
+  }
+
+  #C {
+    color: white;
+    background-color: red;
+  }
+
+  tr > td {
+    border-color: transparent;
+  }
+
+</style>
+<form Name="calc">
+  <table id="calc" border=2>
+    <tr>
+      <td colspan=5>
+        <input id="display" name="display" type="text" readonly="true"  [(ngModel)]="this.display">
+      </td>
+    </tr>
+    <tr>
+      <td><input class="btn" type=button value="MC" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="0" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="1" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="2" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="+" (click)="this.setDisplayContent($event)"></td>
+    </tr>
+    <tr>
+      <td><input class="btn" type=button value="MS" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="3" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="4" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="5" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="-" (click)="this.setDisplayContent($event)"></td>
+    </tr>
+    <tr>
+      <td><input class="btn" type=button value="MR" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="6" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="7" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="8" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="*" (click)="this.setDisplayContent($event)"></td>
+    </tr>
+    <tr>
+      <td><input class="btn" type=button value="M+" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="9" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="±" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="=" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="/" (click)="this.setDisplayContent($event)"></td>
+    </tr>
+    <tr>
+      <td><input class="btn" type=button value="1/x" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="." (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="x2" (click)="this.setDisplayContent($event)"></td>
+      <td><input class="btn" type=button value="√" (click)="this.setDisplayContent($event)"></td>
+      <td><input id="C" class="btn" type=button value="C" (click)="this.setDisplayContent($event)"></td>
+    </tr>
+  </table>
+</form>
+</div>
